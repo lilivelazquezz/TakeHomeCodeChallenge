@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World - Liliana Velazquez</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1 id="title">Hello World!</h1>
+    <!-- draging item -->
+    <p class="text_toy">
+      <img src="img/Arrow.png" width="100px" /><br />drag down the string toy!
+    </p>
+    <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <!-- animacion confetti -->
+
+      <p
+        ondragstart="dragStart(event)"
+        ondrag="dragging(event)"
+        draggable="true"
+        id="dragtarget"
+      >
+        <img class="stringToy" src="img/String.jpg" />
+      </p>
+    </div>
+
+    <p id="tweetyText" class="tweetyText"></p>
+
+    <!-- update action text -->
+    <div
+      class="droptarget"
+      ondrop="drop(event)"
+      ondragover="allowDrop(event)"
+    ></div>
+
+    <div id="art" class="hide">
+      <!-- show/hide -->
+      <!-- Horizontal Scrolling Image -->
+      <div>
+        <!--Scrolling Image  -->
+        <div class="marquee-container">
+          <div class="marquee">
+            <img src="img/Cat.jpeg" height="250px" />
+          </div>
+        </div>
+      </div>
+      <!-- end scrolling Image -->
+      <!-- Image cat 2-->
+      <img class="cat_1" src="img/Cat1.jpg" height="200px" />
+      <img class="cat_3" src="img/Cat3.jpg" />
+      <img class="cat_4" src="img/Cat4.jpeg" />
+      <img class="cat_5" src="img/Cat5.png" />
+
+      <div class="form">
+        <!-- all the form -->
+        <form>
+          <label><b class="message">Enter a Message</b></label>
+          <input type="text" name="message" id="user_input" />
+        </form>
+        <div class="buttonSubmit">
+          <input type="submit" class="submit" onclick="showInput();" />
+        </div>
+
+        <!-- end of form -->
+        <!-- <div style="max-height:1000px;font-size:14pt;color:gold;"> -->
+        <div>
+          <!-- end form  style -->
+          <br />
+          <marquee class="scrollingText" scrollamount="3" direction="down"
+            ><p><span id="display"></span></p
+          ></marquee>
+        </div>
+        <!-- end form  style -->
+      </div>
+      <!-- end of all the form -->
+
+      <!-- end animated background -->
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <!-- end show/hide-->
+    <script src="js/confetti.js"></script>
+    <script language="JavaScript">
+      function showInput() {
+        document.getElementById("display").innerHTML =
+          document.getElementById("user_input").value;
+      }
+    </script>
+
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
