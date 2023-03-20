@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Birth Day Count Down!|Liliana Velazquez</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1935d064dd.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div> <!-- Birth Day Count Down! -->
+                <h1>Birthday Count Down!</h1>
+                <!-- new form -->
+                <form name="my-form" action="" method="post" enctype="multipart/form-data">
+                    <label>Day</label>
+                    <select name="day" id="selectDay">
+                        <option id="day" type="text" name="day" value="">Day</option>
+                    </select>
+                    <select name="month" id="selectMonth">
+                        <option id="month" type="text" name="month" value="">Month</option>
+                    </select>
+                    <select name="year" id="selectYear">
+                        <option id="year" type="text" name="year" value="">Year</option>
+                    </select>
+                    <button type="submit" name="submit">Submit</button>
+                </form> <!-- end of form -->
+                <div class="out">
+                    <code>
+                        <p>Your Birthday is:</p>
+                    </code>
+                    <code>
+                        <p>Your have lived:</p>
+                    </code>
+                </div>
+                <div id="countdown"></div>
+            </div>
+            <div> <!-- color generator -->
+                <span class="count hex">Hex Color White #ffffff</span>
+                <hr />
+            </div> <!-- end color generator -->
+        </div><!-- end of container -->
+        </div><!-- end Birth Day Count Down! -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
