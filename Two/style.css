@@ -1,15 +1,19 @@
-h1{ 
-    font-size: 55px;
-    line-height: 2;
+h1 {
+  font-size: 55px;
+  line-height: 2;
 }
 .count {
-    font-size: 2rem;
-    border: 1px solid var(--white);
-    padding: 0 1rem;
+  font-size: 2rem;
+  border: 1px solid var(--white);
+  padding: 0 1rem;
 }
 #countdown {
-    background-color: #ffff;
-    padding: 20px;
-    font-size: 45px;
-    border-radius: 5px;
+  background-color: #ffff;
+  padding: 20px;
+  font-size: 45px;
+  border-radius: 5px;
+}
+
+code {
+  color: black;
 }

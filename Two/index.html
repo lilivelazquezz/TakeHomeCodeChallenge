@@ -16,7 +16,8 @@
                 <h1>Birthday Count Down!</h1>
                 <!-- new form -->
                 <form name="my-form" action="" method="post" enctype="multipart/form-data">
-                    <label>Day</label>
+                    <label>Date of Birth: </label>
+                    <br>
                     <select name="day" id="selectDay">
                         <option id="day" type="text" name="day" value="">Day</option>
                     </select>
@@ -28,14 +29,19 @@
                     </select>
                     <button type="submit" name="submit">Submit</button>
                 </form> <!-- end of form -->
+                <div class="row">
+                </div>
+                <br>
                 <div class="out">
                     <code>
-                        <p>Your Birthday is:</p>
-                    </code>
-                    <code>
-                        <p>Your have lived:</p>
+                        <p></p>
                     </code>
                 </div>
+            </div>
+            <div class="outYearsOld">
+                <code>
+                    <p></p>
+                </code>
                 <div id="countdown"></div>
             </div>
             <div> <!-- color generator -->
