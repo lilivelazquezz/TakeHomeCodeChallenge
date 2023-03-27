@@ -6,7 +6,7 @@ for (let i = 1; i < 32; i++) {
   dropdownDay[dropdownDay.length] = new Option(i, i);
 }
 
-let selectMonths = new Array( "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+let selectMonths = new Array( "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" );
 let dropdownMonth = document.getElementById("selectMonth");
 for (var i = 0; i < selectMonths.length; ++i) {
   // Append the element to the end of Array list
@@ -35,9 +35,9 @@ function getValues(event) {
 	`;
 
   document.querySelector(".out code").innerHTML = out;
-  console.log(data["day"]);
-  console.log(data["month"]);
-  console.log(data["year"]);
+  //console.log(data["day"]);
+  //console.log(data["month"]);
+  //console.log(data["year"]);
 
   let now = new Date();
 
@@ -54,7 +54,7 @@ function getValues(event) {
   let outYearsOld = `<p> You are <span>${yearsOld}</span> year(s) old. </p>`;
   document.querySelector(".outYearsOld code").innerHTML = outYearsOld;
 
-  console.log(countTo);
+  //console.log(countTo);
   const c = setInterval(() => {
     const endDate = new Date(countTo);
     // console.log(endDate + " this is end date")
@@ -67,12 +67,17 @@ function getValues(event) {
     const minutes = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds) % 60;
     const countDown = document.getElementById("countdown");
-    
+    /*countDown.textContent = 
+      `${days}days ${hours}hrs : ${minutes}min : ${seconds}s` +
+      " for your next b-day";  */
+
     if (days < 0) {
+      clearInterval(c);
       countDown.textContent =
         `${daysPassBday}days ${hours}hrs : ${minutes}min : ${seconds}s` +
         " for your next b-day";
     } else if (days > 0) {
+      clearInterval(c);
       countDown.textContent =
         `${days}days ${hours}hrs : ${minutes}min : ${seconds}s` +
         " for your next b-day";
@@ -80,8 +85,7 @@ function getValues(event) {
       clearInterval(c);
       countDown.textContent = "Happy Birth Day!!!";
     }
-
-    console.log(days);
+    //console.log(days);
   });
 } // end of form input
 
