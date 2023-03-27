@@ -1,6 +1,7 @@
 h1 {
   font-size: 55px;
-  line-height: 2;
+  line-height: normal;
+  margin-top: 20px;
 }
 .count {
   font-size: 2rem;
@@ -16,7 +17,8 @@ h1 {
   margin-top: 10px;
 }
 .zodiacArt {
-  margin: 20px 0px;
+  margin: 40px 0px 30px;
+  text-align: center;
 }
 code {
   color: black;
@@ -31,4 +33,20 @@ img {
   width: auto;
   max-width: 300px;
   max-height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  h1 {
+    line-height: 3 !important;
+  }
+  .zodiacArt {
+    text-align: left;
+  }
+  img {
+    text-align: left;
+  }
 }
