@@ -6,14 +6,29 @@ h1 {
   font-size: 2rem;
   border: 1px solid var(--white);
   padding: 0 1rem;
+  opacity: 0.6;
 }
 #countdown {
   background-color: #ffff;
   padding: 20px;
   font-size: 45px;
   border-radius: 5px;
+  margin-top: 10px;
 }
-
+.zodiacArt {
+  margin: 20px 0px;
+}
 code {
   color: black;
+}
+.newData {
+  background-color: #ffff;
+  padding: 20px 10px 15px;
+  border-radius: 5px;
+}
+img {
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
 }

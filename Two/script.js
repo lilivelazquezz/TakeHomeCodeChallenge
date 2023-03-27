@@ -35,31 +35,125 @@ function getValues(event) {
 	`;
 
   document.querySelector(".out code").innerHTML = out;
-  //console.log(data["day"]);
-  //console.log(data["month"]);
-  //console.log(data["year"]);
 
+  /**** Calculate Years ****/
   let now = new Date();
-
   let yearsOld = new Date().getFullYear() - data["year"];
   if (now.getMonth() > selectMonths.indexOf(data["month"])) {
     yearsOld = new Date().getFullYear() - data["year"];
   } else if (now.getMonth() < selectMonths.indexOf(data["month"])) {
     yearsOld = new Date().getFullYear() - data["year"] - 1;
   }
-
-  const countTo = data["day"] + " " + data["month"] + " " + 2024;
-  //const countTo = data["day"] + " " + data["month"] + " " + (new Date().getFullYear());
+  
+  let newYear = new Date().getFullYear() + 1;
+  const countTo = data["day"] + " " + data["month"] + " " + newYear;
 
   let outYearsOld = `<p> You are <span>${yearsOld}</span> year(s) old. </p>`;
   document.querySelector(".outYearsOld code").innerHTML = outYearsOld;
 
-  //console.log(countTo);
+  /**** Zodiac Sign ****/
+  const img = document.querySelector("img");
+
+  if (
+    (selectMonths.indexOf(data["month"]) === 2 && data["day"] >= 21) ||
+    (selectMonths.indexOf(data["month"]) === 3 && data["day"] <= 19)
+  ) {
+    img["src"] = "img/Aries.png";
+    document.querySelector(".zodiacSign code").innerHTML =
+      "Your zodiac sign is Aries!";
+  }
+  if (
+    (selectMonths.indexOf(data["month"]) === 3 && data["day"] >= 20) ||
+    (selectMonths.indexOf(data["month"]) === 4 && data["day"] <= 20)
+  ) {
+    img["src"] = "img/Taurus.png";
+    document.querySelector(".zodiacSign code").innerHTML =
+      "Your zodiac sign is Taurus!";
+  }
+  if (
+    (selectMonths.indexOf(data["month"]) === 4 && data["day"] >= 21) ||
+    (selectMonths.indexOf(data["month"]) === 5 && data["day"] <= 20)
+  ) {
+    img["src"] = "img/Gemini.png";
+    document.querySelector(".zodiacSign code").innerHTML =
+      "Your zodiac sign is Gemini!";
+  }
+  if (
+    (selectMonths.indexOf(data["month"]) === 5 && data["day"] >= 21) ||
+    (selectMonths.indexOf(data["month"]) === 6 && data["day"] <= 22)
+  ) {
+    img["src"] = "img/Cancer.png";
+    document.querySelector(".zodiacSign code").innerHTML =
+      "Your zodiac sign is Cancer!";
+  }
+  if (
+    (selectMonths.indexOf(data["month"]) === 6 && data["day"] >= 23) ||
+    (selectMonths.indexOf(data["month"]) === 7 && data["day"] <= 22)
+  ) {
+    img["src"] = "img/Leo.png";
+    document.querySelector(".zodiacSign code").innerHTML =
+      "Your zodiac sign is Leo!";
+  }
+  if (
+    (selectMonths.indexOf(data["month"]) === 7 && data["day"] >= 23) ||
+    (selectMonths.indexOf(data["month"]) === 8 && data["day"] <= 22)
+  ) {
+    img["src"] = "img/Virgo.png";
+    document.querySelector(".zodiacSign code").innerHTML =
+      "Your zodiac sign is Virgo!";
+  }
+  if (
+    (selectMonths.indexOf(data["month"]) === 8 && data["day"] >= 23) ||
+    (selectMonths.indexOf(data["month"]) === 9 && data["day"] <= 22)
+  ) {
+    img["src"] = "img/Libra.png";
+    document.querySelector(".zodiacSign code").innerHTML =
+      "Your zodiac sign is Libra!";
+  }
+  if (
+    (selectMonths.indexOf(data["month"]) === 9 && data["day"] >= 23) ||
+    (selectMonths.indexOf(data["month"]) === 10 && data["day"] <= 21)
+  ) {
+    img["src"] = "img/Scorpio.png";
+    document.querySelector(".zodiacSign code").innerHTML =
+      "Your zodiac sign is Scorpio!";
+  }
+  if (
+    (selectMonths.indexOf(data["month"]) === 10 && data["day"] >= 22) ||
+    (selectMonths.indexOf(data["month"]) === 11 && data["day"] <= 21)
+  ) {
+    img["src"] = "img/Sagittarius.png";
+    document.querySelector(".zodiacSign code").innerHTML =
+      "Your zodiac sign is Sagittarius!";
+  }
+  if (
+    (selectMonths.indexOf(data["month"]) === 11 && data["day"] >= 22) ||
+    (selectMonths.indexOf(data["month"]) === 0 && data["day"] <= 19)
+  ) {
+    img["src"] = "img/Capricorn.png";
+    document.querySelector(".zodiacSign code").innerHTML =
+      "Your zodiac sign is Capricorn!";
+  }
+  if (
+    (selectMonths.indexOf(data["month"]) === 0 && data["day"] >= 20) ||
+    (selectMonths.indexOf(data["month"]) === 1 && data["day"] <= 18)
+  ) {
+    img["src"] = "img/Aquarius.png";
+    document.querySelector(".zodiacSign code").innerHTML =
+      "Your zodiac sign is Aquarius!";
+  }
+  if (
+    (selectMonths.indexOf(data["month"]) === 1 && data["day"] >= 19) ||
+    (selectMonths.indexOf(data["month"]) === 2 && data["day"] <= 20)
+  ) {
+    img["src"] = "img/Pisces.png";
+    document.querySelector(".zodiacSign code").innerHTML =
+      "Your zodiac sign is Pisces!";
+  }
+
   const c = setInterval(() => {
     const endDate = new Date(countTo);
-    // console.log(endDate + " this is end date")
     const currentDate = new Date();
-    // console.log(currentDate)
     const totalSeconds = (endDate - currentDate) / 1000;
     const days = Math.floor(totalSeconds / 3600 / 24) - 365;
     const daysPassBday = Math.floor(totalSeconds / 3600 / 24);
@@ -67,9 +161,6 @@ function getValues(event) {
     const minutes = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds) % 60;
     const countDown = document.getElementById("countdown");
-    /*countDown.textContent = 
-      `${days}days ${hours}hrs : ${minutes}min : ${seconds}s` +
-      " for your next b-day";  */
 
     if (days < 0) {
       clearInterval(c);
@@ -85,17 +176,10 @@ function getValues(event) {
       clearInterval(c);
       countDown.textContent = "Happy Birth Day!!!";
     }
-    //console.log(days);
   });
 } // end of form input
 
 // Color Generator
-/*
-let color = Math.random();
-color = Math.random().toString(16);
-color = Math.random().toString(16).substring(2, 8); //.substring(x, y)
-console.log(color);
-*/
 const hex = document.querySelector(".hex");
 const btn = document.querySelector(".generate");
 const generateColor = () => {
