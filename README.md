@@ -6,4 +6,5 @@
  [One](https://lilivelazquezz.github.io/TakeHomeCodeChallenge/One/ "Take Home Code Challenge One")
 
  [Two](https://lilivelazquezz.github.io/TakeHomeCodeChallenge/Two/ "Take Home Code Challenge Two")
- 
+
+ [Three](https://lilivelazquezz.github.io/TakeHomeCodeChallenge/Three/ "Take Home Code Challenge Three")
