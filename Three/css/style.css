@@ -1,0 +1,11 @@
+img {
+  height: auto;
+  width: auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+}
